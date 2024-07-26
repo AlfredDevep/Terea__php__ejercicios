@@ -1,5 +1,21 @@
 <?php
-function esPalindromo($cadena) {
+
+/**
+ *  Oso
+    Luzul
+    Arenera
+    Menem
+    Aibofobia 
+    Civic
+    salas
+    solos
+    radar
+
+
+ */     
+
+function esPalindromo($cadena)
+{
     // Convertir a minúsculas
     $cadena = strtolower($cadena);
     // Eliminar caracteres no alfabéticos y espacios en blanco
@@ -10,6 +26,7 @@ function esPalindromo($cadena) {
 ?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,6 +34,7 @@ function esPalindromo($cadena) {
     <!-- Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
     <div class="container">
         <h2 class="mt-5">Resultado de Verificación de Palíndromo</h2>
@@ -24,7 +42,7 @@ function esPalindromo($cadena) {
             <?php
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $cadena = $_POST["cadena"];
-                
+
                 if (!empty($cadena)) {
                     if (esPalindromo($cadena)) {
                         echo "<div class='alert alert-success'>\"$cadena\" es un palíndromo.</div>";
@@ -44,4 +62,5 @@ function esPalindromo($cadena) {
     </div>
 
 </body>
+
 </html>
