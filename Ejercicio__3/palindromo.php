@@ -1,6 +1,6 @@
 <?php
 
-/**
+/** Palabras palíndromas
  *  Oso
     Luzul
     Arenera
